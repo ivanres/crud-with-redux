@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import GamesPage from './GamesPage';
 import './App.css';
 
 class App extends Component {
@@ -12,8 +13,11 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
-          <Link to="games">Games</Link>
+          <Link to="/games">Games</Link>
         </p>
+
+        <Route exact path="/games" component={GamesPage} />
+
       </div>
     );
   }
